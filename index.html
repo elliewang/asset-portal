@@ -1,5 +1,77 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b1d34"><meta name="description" content="Insurance financial asset management demo and portfolio intelligence portal"><title>Atlas | Insurance Asset Intelligence</title><link rel="stylesheet" href="styles.css"></head>
-<body><div class="app-shell"><aside class="sidebar" id="sidebar"><div class="brand"><div class="brandmark">A</div><div><strong>ATLAS</strong><small>ASSET INTELLIGENCE</small></div></div><div class="workspace-tag"><span class="status-dot"></span> Insurance Investment Portal <span class="demo-tag">DEMO</span></div><nav aria-label="Primary navigation" id="nav"><div class="nav-label">WORKSPACE</div><button class="nav-item active" data-page="overview">◫ <span>Executive Overview</span></button><button class="nav-item" data-page="holdings">▦ <span>Asset Holdings</span></button><button class="nav-item" data-page="analytics">◷ <span>Analytics & Reporting</span></button><button class="nav-item" data-page="transactions">⇄ <span>Transactions & Cash</span></button><button class="nav-item" data-page="liabilities">▤ <span>Liability Matching</span></button><div class="nav-label">CONTROL & STRATEGY</div><button class="nav-item" data-page="risk">⬡ <span>Risk & Compliance</span></button><button class="nav-item" data-page="allocation">◎ <span>Allocation & Strategy</span></button><button class="nav-item" data-page="documents">▣ <span>Documents & Reports</span></button><button class="nav-item" data-page="settings">⚙ <span>Workspace Settings</span></button></nav><div class="sidebar-foot"><div class="avatar">WW</div><div><strong>Wenting Wang</strong><small>Portfolio Administrator</small></div></div></aside>
-<div class="main-wrap"><header class="topbar"><div class="top-left"><button class="iconbtn menu-btn" id="menuBtn" aria-label="Open menu">☰</button><div class="crumb">INSURANCE / <span id="crumb">OVERVIEW</span></div></div><div class="top-right"><span class="market-label"><span class="status-dot"></span> Demo data · Updated locally</span><button class="iconbtn" id="notifyBtn" aria-label="Notifications">♧<span class="notification-pin"></span></button><div class="avatar small">WW</div></div></header><main id="main" tabindex="-1"></main><footer>ATLAS Financial Asset Intelligence <span>Portfolio demo by Wenting Wang · Not connected to live financial systems</span></footer></div></div>
-<button class="chat-launcher" id="chatLauncher" aria-label="Open Atlas assistant">✦ <span>Ask Atlas AI</span></button><section class="chat-panel hidden" id="chatPanel" aria-label="Atlas virtual assistant"><header class="chat-head"><div class="chat-orb">✦</div><div><strong>Atlas Assistant</strong><small>Portfolio help · Demo knowledge assistant</small></div><button id="chatClose" class="iconbtn" aria-label="Close chat">×</button></header><div class="chat-messages" id="chatMessages" aria-live="polite"></div><div class="chat-suggestions" id="chatSuggestions"><button data-q="Summarize my portfolio">Portfolio summary</button><button data-q="What is my risk exposure?">Risk exposure</button><button data-q="How do liabilities compare?">Liability matching</button></div><form id="chatForm" class="chat-form"><input id="chatInput" placeholder="Ask about assets, risk, cash flows…" autocomplete="off" aria-label="Chat message"><button type="submit" aria-label="Send message">➤</button></form><small class="chat-disclaimer">Demo assistant uses local sample data. No external AI service or financial advice.</small></section><div id="toast" class="toast" role="status"></div><script src="app.js"></script></body></html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1d34">
+    <meta name="description" content="Insurance financial asset management demo and portfolio intelligence portal">
+    <title>Atlas | Insurance Asset Intelligence</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="brand">
+                <div class="brandmark">A</div>
+                <div><strong>ATLAS</strong><small>ASSET INTELLIGENCE</small></div>
+            </div>
+            <div class="workspace-tag"><span class="status-dot"></span> Insurance Investment Portal <span
+                    class="demo-tag">DEMO</span></div>
+            <nav aria-label="Primary navigation" id="nav">
+                <div class="nav-label">WORKSPACE</div><button class="nav-item active" data-page="overview">◫
+                    <span>Executive Overview</span></button><button class="nav-item" data-page="holdings">▦ <span>Asset
+                        Holdings</span></button><button class="nav-item" data-page="analytics">◷ <span>Analytics &
+                        Reporting</span></button><button class="nav-item" data-page="transactions">⇄ <span>Transactions
+                        & Cash</span></button><button class="nav-item" data-page="liabilities">▤ <span>Liability
+                        Matching</span></button>
+                <div class="nav-label">CONTROL & STRATEGY</div><button class="nav-item" data-page="risk">⬡ <span>Risk &
+                        Compliance</span></button><button class="nav-item" data-page="allocation">◎ <span>Allocation &
+                        Strategy</span></button><button class="nav-item" data-page="documents">▣ <span>Documents &
+                        Reports</span></button><button class="nav-item" data-page="settings">⚙ <span>Workspace
+                        Settings</span></button>
+            </nav>
+            <div class="sidebar-foot">
+                <div class="avatar">WW</div>
+                <div><strong>Wenting Wang</strong><small>Portfolio Administrator</small></div>
+            </div>
+        </aside>
+        <div class="main-wrap">
+            <header class="topbar">
+                <div class="top-left"><button class="iconbtn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+                    <div class="crumb">INSURANCE / <span id="crumb">OVERVIEW</span></div>
+                </div>
+                <div class="top-right"><span class="market-label"><span class="status-dot"></span> Demo data · Updated
+                        locally</span><button class="iconbtn" id="notifyBtn" aria-label="Notifications">♧<span
+                            class="notification-pin"></span></button>
+                    <div class="avatar small">WW</div>
+                </div>
+            </header>
+            <main id="main" tabindex="-1"></main>
+            <footer>ATLAS Financial Asset Intelligence <span>Portfolio demo by Wenting Wang · Not connected to live
+                    financial systems</span></footer>
+        </div>
+    </div>
+    <button class="chat-launcher" id="chatLauncher" aria-label="Open Atlas assistant">✦ <span>Ask Atlas
+            AI</span></button>
+    <section class="chat-panel hidden" id="chatPanel" aria-label="Atlas virtual assistant">
+        <header class="chat-head">
+            <div class="chat-orb">✦</div>
+            <div><strong>Atlas Assistant</strong><small>Portfolio help · Demo knowledge assistant</small></div><button
+                id="chatClose" class="iconbtn" aria-label="Close chat">×</button>
+        </header>
+        <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
+        <div class="chat-suggestions" id="chatSuggestions"><button data-q="Summarize my portfolio">Portfolio
+                summary</button><button data-q="What is my risk exposure?">Risk exposure</button><button
+                data-q="How do liabilities compare?">Liability matching</button></div>
+        <form id="chatForm" class="chat-form"><input id="chatInput" placeholder="Ask about assets, risk, cash flows…"
+                autocomplete="off" aria-label="Chat message"><button type="submit" aria-label="Send message">➤</button>
+        </form><small class="chat-disclaimer">Demo assistant uses local sample data. No external AI service or financial
+            advice.</small>
+    </section>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
